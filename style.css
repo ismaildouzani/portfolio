@@ -116,6 +116,15 @@ img {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    display: block;
 }
 
 .dot {
@@ -258,6 +267,19 @@ img {
 .btn-secondary:hover {
     border-color: var(--text-main);
     background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-cal {
+    background: linear-gradient(90deg, #22c55e, #14b8a6);
+    color: white;
+    box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+    border: none;
+}
+
+.btn-cal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(20, 184, 166, 0.4);
+    filter: brightness(1.1);
 }
 
 .abstract-shape {
@@ -728,7 +750,14 @@ img {
     }
 
     .hero-buttons {
-        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        gap: var(--space-sm);
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
     }
 
     .abstract-shape {
